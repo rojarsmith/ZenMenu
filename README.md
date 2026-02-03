@@ -1,45 +1,70 @@
-TrayToolbar
-===
+# ZenMenu
 
-:rocket: Provide the replacement of add new toolbar function that was cancelled in windows 11. 
-
-I have no money to get a girlfriend, so I have no choice...
+:rocket: Access frequently used data that you have created using folders in the toolbar.
 
 ## Intro
 
-The Windows 10 provide the convenient function that can make the nested folder to be a custom menu. But it was removed in Windows 11. TrayToolbar is the program provided the similar function by system tray.
+Assuming you have the following data structure consisting of folders and files stored in your SSD/HDD:
 
-![windows-10-toobars.png](img/windows-10-toobars.png)
+```ini
+C:\TEMP
+│   dd.pub
+│   Downloads.xml.20230812.bak
+│   InSpectre.exe
+│   msvcp140_1.dll
+│   New Bitmap image.bmp
+│   New Microsoft Excel Worksheet.xlsx
+│   New Text Document.txt
+│   PP-UWP-Interop.dll
+│   Yahoo奇摩.url
+│
+├───.git
+├───New folder
+│   │   Yahoo! ショッピング - LINEアカウント連携でPayPayポイント毎日5%！ネット通販.url
+│   │
+│   └───New folder
+│           New Microsoft PowerPoint Presentation.pptx
+│
+├───New folder (2)
+│       New Text Document.txt
+│
+├───node_modules
+├───あ　あ　あ
+│       01-01 - The Prelude - Reunion.flac
+│       PP-UWP-Interop.dll
+│
+└───東方心綺楼-御首頂戴帳
+```
 
-*Nested folder to be a custom menu in Windows 10*
+Set `C:\TEMP` as the scan path, and then left-click the tray icon on the toolbar. You will get a nested list with the same structure, and you can click on the item in the list to open a folder or file.
 
+![zm-2026-02-03001146.png](img/zm-2026-02-03-001146.png)
 
+> Nested list supporting mouse hover
 
 ## Guide
 
 ### Environment
 
-- Windows 10/11
-- .NET Desktop Runtime 8.0.0+ ( [Download](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.3-windows-x64-installer) )
+- Windows 11
 
-## Instruction 
+## Instruction
 
-Download released package and then uncompress it. Running "TrayToolbar.exe" to open the app.
+Download released package and install it. Running `zenmenu.exe` to run the app.
 
 Pay attention to the tray icon at taskbar that the new icon showed.
 
 Right-click mouse :
 
-- Refresh - Refresh left-click menu.
-- Options - Config app.
+- Settings - Config app.
 - About - Information about app.
 - Exit - Exit app.
 
-![mouse-right-click-menu.png](img/mouse-right-click-menu.png)
+![zm-2026-02-03-002728.png](img/zm-2026-02-03-002728.png)
 
-*TrayToolbar App & right-click menu*
+> Tray Icon & right-click menu
 
-Click "Options".
+Click "Settings".
 
 You can config the parameters of app:
 
@@ -47,53 +72,29 @@ You can config the parameters of app:
 - Depth - the maxima scan depth of nested folder. It is recommended not to exceed 5.
 - Exclude File - Filter based on the name at the end of the file. Filtered files will not appear in the menu. Multiple parameters can be separated by semicolons `;`.
 - Exclude Folder - Filter based on the name at the end of the folder. Filtered folders will not appear in the menu. Multiple parameters can be separated by semicolons `;`.
-- Icon - switch display the icon beside of item.
 
-![options.png](img/options.png)
+![zm-2026-02-03-002946.png](img/zm-2026-02-03-002946.png)
 
-*Options*
-
+> Settings
 
 
-After config options, restart the app.
 
-Left-click mouse and it shows the nested menu mapping to nested folder.
+After config settings, left-click mouse and it shows the nested menu mapping to nested folder and files.
 
-You can click any item if it is:
+You can click any item and then the result depends on different types:
 
 - Folder - Open the windows explorer by path.
 - Files - Open the file with associated app.
 
-Special :
-
-- House Logo - Open the windows explorer by home path.
-
-![mouse-left-click-menu.png](img/mouse-left-click-menu.png)
-
-*The nested menu mapping to nested folder*
-
 Enjoy 😁
 
-
-
-## Donate 
+## Donate
 
 [BTC]  bc1qd3889yxkk2tqjvxnxwa8qumr068htctat4ef3c
 
 [ETH]  0xAF5e6b4a618238A9Bf202a78087f6F06351117e1
 
-If this program help you and willing to sponsor me to continue to improve this software, please support me with effective action.
-
-Crowdfunding Features :
-
-1. Complex folder and file filter
-2. DPI scale
-3. Multi root path
-4. Look feel
-5. Config sync to cloud
-6. Utility that do not slow down the opening menu speed
-7. The version without .net core
-8. Open source
+I'm a single, unmarried, veteran programmer (you know what I mean), and I need some money to take care of myself. If this program help you and willing to sponsor me to continue to improve this software, please support me with effective action.
 
 ## Sponsor
 
